@@ -620,6 +620,10 @@ inform() {
     printf "   ✦  $fmt\n" "$@"
 }
 
+inform_muted() {
+    printf "   ✦  ${dim}$1${reset}\n" "$@"
+}
+
 announce() {
     local fmt="$1"; shift
     printf "○───✦ $fmt\n" "$@"
