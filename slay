@@ -170,7 +170,7 @@ if [ -x mas ]; then
 
 	print_warning "Please install mas-cli first: brew mas. Skipping."
 
-	else
+else
 
 	if [ -e $cwd/swag/apps ]; then
 		if mas_setup; then
