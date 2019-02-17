@@ -480,7 +480,7 @@ ask() {
 }
 
 ###############################################################################
-# 
+#
 ###############################################################################
 
 # return 1 if global command line program installed, else 0
@@ -584,6 +584,23 @@ install_npm_packages() {
 		print_success_muted "$1 already installed. Skipped."
 	fi
 }
+
+set_app_icons() {
+    echo_install "Setting $2"
+    # Uses setfileicon by Damien Bobillot
+    if [ -e "/Applications/$1" ]; then
+        if [ -e "$cwd/icons/$2.icns" ]; then
+            sudo bin/setfileicon "$cwd/icons/$2.icns" "/Applications/$1" >/dev/null
+        else
+            print_warning "Icon $2 isn't found in /formation/icons. Skipping."
+        fi
+    else
+        print_warning "Application $1 isn't found in /formation/icons. Skipping."
+    fi
+
+    print_in_green "${bold}✓ set!${normal}\n"
+}
+
 
 # The releases are returned in the format
 # {"id":3622206,"tag_name":"hello-1.0.0.11",…}

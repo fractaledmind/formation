@@ -208,6 +208,21 @@ if [ -e $cwd/swag/npm ]; then
 fi
 
 ###############################################################################
+# SET: file icons
+###############################################################################
+if [ -e $cwd/swag/icons ]; then
+	chapter "Setting file icons"
+	. $cwd/swag/icons
+
+	for iconset in "${iconsets[@]}"; do
+		APP="${iconset%%::*}"
+		ICON="${iconset##*::}"
+
+		set_app_icons "$APP" "$ICON"
+	done
+fi
+
+###############################################################################
 # Default Settings
 ###############################################################################
 if [ -e $cwd/swag/defaults ]; then
