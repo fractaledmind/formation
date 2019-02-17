@@ -226,6 +226,7 @@ fi
 # Default Settings
 ###############################################################################
 if [ -e $cwd/swag/defaults ]; then
+	chapter "Setting operating system defaults"
 	. $cwd/swag/defaults
 fi
 
