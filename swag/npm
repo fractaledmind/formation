@@ -1,11 +1,7 @@
-beyonce::beyonce
 cssstats-cli::cssstats
 eslint::eslint
 fast-cli::fast
 @frctl/fractal::fractal
-git-standup::git-standup
 hotel::hotel
 imageoptim-cli::imageOptim
 pa11y::pa11y
-vsce::vsce
-yo::yo
