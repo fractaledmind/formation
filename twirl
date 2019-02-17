@@ -586,19 +586,18 @@ install_npm_packages() {
 }
 
 set_app_icons() {
-    echo_install "Setting $2"
+    echo_install "Setting $2 icon"
     # Uses setfileicon by Damien Bobillot
     if [ -e "/Applications/$1" ]; then
         if [ -e "$cwd/icons/$2.icns" ]; then
             sudo bin/setfileicon "$cwd/icons/$2.icns" "/Applications/$1" >/dev/null
+            print_in_green "${bold}✓ set!${normal}\n"
         else
-            print_warning "Icon $2 isn't found in /formation/icons. Skipping."
+            print_warning "Icon $2 isn't found in $cwd/icons. Skipping."
         fi
     else
-        print_warning "Application $1 isn't found in /formation/icons. Skipping."
+        print_warning "Application $1 isn't found in /Applications. Skipping."
     fi
-
-    print_in_green "${bold}✓ set!${normal}\n"
 }
 
 
