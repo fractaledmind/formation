@@ -1,10 +1,13 @@
 ack
 asciinema
 autoenv
+bash-completion
 coreutils
+direnv
 ffmpeg
 findutils
 git
+git-standup
 hub
 hugo
 mas
@@ -12,6 +15,8 @@ pandoc
 python
 rbenv
 rename
+sqlite
+the_silver_searcher
 tig
 trash
 tree
