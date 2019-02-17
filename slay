@@ -64,7 +64,7 @@ ask_for_sudo
 # PROMPT: SSH Key
 ###############################################################################
 chapter 'Checking for SSH key…'
-ssh_key_setup
+# ssh_key_setup
 
 ###############################################################################
 # INSTALL: Dependencies
