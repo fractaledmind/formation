@@ -2,6 +2,7 @@ cssstats-cli::cssstats
 eslint::eslint
 fast-cli::fast
 @frctl/fractal::fractal
+gitmoji-cli::gitmoji
 hotel::hotel
 imageoptim-cli::imageOptim
 pa11y::pa11y
