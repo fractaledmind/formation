@@ -1,7 +1,8 @@
 iconsets=(
-  'Sublime Text.app::Sublime Text'
+  'iTerm.app::iTerm'
   'Sketch.app::Sketch'
   'Skim.app::Skim'
-  'iTerm.app::iTerm'
+  'Sublime Text.app::Sublime Text'
+  'Tower.app::Tower'
   'UlyssesMac.app::Ulysses'
 )
