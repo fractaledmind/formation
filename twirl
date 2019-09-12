@@ -21,7 +21,12 @@ underline="\e[37;4m"
 indent="   "
 
 # Get full directory name of this script
-cwd="$(cd "$(dirname "$0")" && pwd)"
+cwd="$(cd "$(dirname "$BASH_SOURCE")" && pwd)"
+if [ ! -d "$cwd" ]; then
+  # error; for some reason, the path is not accessible
+  # to the script (e.g. permissions re-evaled after suid)
+  cwd="$(pwd)"
+fi
 
 DOTFILES_ROOT=$HOME/.dotfiles
 
