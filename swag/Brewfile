@@ -1,0 +1,122 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+brew "ack"
+brew "readline"
+brew "sqlite"
+brew "python"
+brew "asciinema"
+brew "autoenv"
+brew "bash-completion"
+brew "bat"
+brew "glib"
+brew "coreutils"
+brew "direnv"
+brew "elixir"
+brew "fd"
+brew "ffmpeg"
+brew "findutils"
+brew "git"
+brew "git-standup"
+brew "hub"
+brew "hugo"
+brew "imagemagick@6", link: true
+brew "mas"
+brew "memcached"
+brew "youtube-dl"
+brew "mpv"
+brew "mysql@5.7", restart_service: true, link: true
+brew "node"
+brew "pandoc"
+brew "pkg-config"
+brew "postgresql", restart_service: true
+brew "ruby-build"
+brew "rbenv"
+brew "rbspy"
+brew "redis", restart_service: true
+brew "rename"
+brew "ripgrep"
+brew "ssh-copy-id"
+brew "the_silver_searcher"
+brew "tig"
+brew "tmux"
+brew "trash"
+brew "tree"
+brew "wget"
+brew "yarn"
+cask "1password"
+cask "adobe-acrobat-reader"
+cask "aerial"
+cask "agenda"
+cask "alfred"
+cask "appcleaner"
+cask "backblaze"
+cask "blisk"
+cask "boom"
+cask "brave-browser"
+cask "canary"
+cask "daisydisk"
+cask "dash"
+cask "docker"
+cask "dropbox"
+cask "expressions"
+cask "fantastical"
+cask "firefox"
+cask "flux"
+cask "forklift"
+cask "google-chrome"
+cask "hazel"
+cask "hyper"
+cask "hyperdock"
+cask "iina"
+cask "imageoptim"
+cask "iterm2"
+cask "kap"
+cask "karabiner-elements"
+cask "mactex"
+cask "marked"
+cask "nvalt"
+cask "omnifocus"
+cask "pdf-expert"
+cask "postman"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-json"
+cask "rocket"
+cask "sketch"
+cask "skim"
+cask "skype"
+cask "slack"
+cask "spotify"
+cask "sublime-text"
+cask "tableplus"
+cask "textexpander"
+cask "tor-browser"
+cask "tower"
+cask "transmission"
+cask "transmit"
+cask "vagrant"
+cask "visual-studio-code"
+cask "vivaldi"
+cask "vlc"
+cask "zotero"
+mas "Amphetamine", id: 937984704
+mas "Boom 2", id: 948176063
+mas "Deliveries", id: 924726344
+mas "Encrypto", id: 935235287
+mas "GarageBand", id: 682658836
+mas "GIF Brewery 3", id: 1081413713
+mas "Highlights", id: 794854093
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Outlook", id: 985367838
+mas "MindNode Pro", id: 402398561
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "The Unarchiver", id: 425424353
+mas "ToothFairy", id: 1191449274
+mas "UlyssesMac", id: 1225570693
+mas "Xcode", id: 497799835

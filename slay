@@ -27,7 +27,7 @@ fi
 check_bash_version
 
 ###############################################################################
-# Get in Formation!          http://patorjk.com/software/taag/ ( font: Script )
+# Get in Formation!         http://patorjk.com/software/taag/ ( font: Script )
 ###############################################################################
 
 printf "
@@ -137,12 +137,10 @@ fi
 ###############################################################################
 # INSTALL: brews
 ###############################################################################
-if [ -e $cwd/swag/brews ]; then
+if [ -e "$cwd/Brewfile" ]; then
 	chapter "Installing Homebrew formulae…"
 
-	for brew in $(<$cwd/swag/brews); do
-		install_brews $brew
-	done
+	brew bundle
 fi
 
 ###############################################################################
@@ -150,43 +148,6 @@ fi
 ###############################################################################
 chapter "Updating Homebrew formulae…"
 brew update
-
-###############################################################################
-# INSTALL: casks
-###############################################################################
-if [ -e $cwd/swag/casks ]; then
-	chapter "Installing apps via Homebrew…"
-
-	for cask in $(<$cwd/swag/casks); do
-	    install_application_via_brew $cask
-	done
-fi
-
-###############################################################################
-# INSTALL: Mac App Store Apps
-###############################################################################
-chapter "Installing apps from App Store…"
-if [ -x mas ]; then
-
-	print_warning "Please install mas-cli first: brew mas. Skipping."
-
-else
-
-	if [ -e $cwd/swag/apps ]; then
-		if mas_setup; then
-			# Workaround for associative array in Bash 3
-			# https://stackoverflow.com/questions/6047648/bash-4-associative-arrays-error-declare-a-invalid-option
-			for app in $(<$cwd/swag/apps); do
-				KEY="${app%%::*}"
-				VALUE="${app##*::}"
-				install_application_via_app_store $KEY $VALUE
-			done
-		else
-			print_warning "Please signin to App Store first. Skipping."
-		fi
-	fi
-
-fi
 
 ###############################################################################
 # CLEAN: Homebrew files
